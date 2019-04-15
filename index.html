@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Weekly WebDev Challange #1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="logo">
+      <img src="img/logo.png" alt="masteralb_logo">
+    </header>
+<div class="container">
+  <div class="col1">
+    <div class="form-content">
+      <h1>Register Form</h1>
+      <div class="form-box">
+      <form class="reg_form" action="index.html" method="post">
+        <div class="withIcon">
+	        <label for="reg_username">Username:</label>
+          <i class="fas fa-user"></i><input class="inputs" id="reg_username" type="text" name="username" placeholder="Username" required><br/>
+        </div>
+        <div class="withIcon">
+			<label for="reg_password">Password:</label>
+          <i class="fas fa-lock"></i><input class="inputs" id="reg_password" type="password" name="password" placeholder="Password" required><br/>
+        </div>
+        <div class="withIcon">
+			<label for="reg_password_confirm">Confirm password:</label>
+          <i class="fas fa-lock"></i><input class="inputs" id="reg_password_confirm" type="password" name="password-confirm" placeholder="Confirm Password" required><br/>
+        </div>
+        <div class="withIcon">
+			<label for="reg_email">Email:</label>
+          <i class="fas fa-envelope"></i><input class="inputs" id="reg_email" type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="withIcon">
+			<label for="reg_location">Location</label>
+          <i class="fas fa-map-marker-alt"></i><select class="inputs select" id="reg_location" name="location" required>
+            <option value="" selected hidden>Lokacja</option>
+            <option value="katowice">Katowice</option>
+            <option value="chorzow">Chorzów</option>
+            <option value="tychy">Tychy</option>
+            <option value="krakow">Kraków</option>
+          </select>
+        </div>
+        <input id="reg_terms" type="checkbox" name="terms" required />
+        <label for="reg_terms">I have read and accept the terms of use.</label>
+        <button id="first_submit" type="submit" name="signup">Sign up</button>
+        <div id="pw_valid"></div> <!-- Wrong password confirm JS validation -->
+      </form>
+    </div> <!-- First form withou header 'form-box'-->
+  </div> <!-- First form with header 'form-content''-->
+  	<!-- Send email form -->
+  	<div class="form-content">
+  		<h1>Send Email</h1>
+  		<div class="form-box">
+  			<div class="withIcon">
+  				<label for="mail-name">Username:</label>
+  				<i class="fas fa-user"></i><input class="inputs" id="mail-name" type="text" name="mail-name" placeholder="Your Name" required>
+  			</div>
+  			<div class="withIcon">
+  			<label for="youremail">Email:</label>
+  			<i class="fas fa-envelope"></i><input class="inputs" type="email" name="youremail" id="youremail" placeholder="Your email" />
+  			</div>
+  			<textarea placeholder="Type your message..." name="mailcontent"></textarea>
+        <input type="checkbox" name="copymail" id="copymail" />
+        <label for="copymail">Send a copy to my Email</label>
+        <button type="submit"  name="signup">Send Email</button>
+  		</div>
+  	</div>
+  </div> <!-- COL 1 END -->
+  <div class="col2">
+  <div class="form-content">
+    <h1>Sign In Form</h1>
+    <div class="form-box">
+        <form class="sign-in" action="index.html" method="post">
+          <div class="withIcon">
+			<label for="sign_username">Username:</label>
+            <i class="fas fa-user"></i><input type='username' id='sign_username' class='inputs' placeholder='Username' required/>
+          </div>
+          <div class="withIcon">
+			<label for="sign_password">Password:</label>
+            <i class="fas fa-lock"></i><input id="sign_password" type="password" name="password" placeholder="Password" class='inputs' required/>
+          </div>
+          <div class='button-flex'>
+            <input id='remember' type="checkbox" name='remember' required />
+            <label for='remember'>Remember me.</label>
+            <button type='submit' name='sign-in'>Sign in</button>
+          </div>
+        </form>
+    </div><!-- second form withou header 'form-box'-->
+  </div><!-- second form with header 'form-content''-->
+  <!-- form phone -->
+  	<div class="form-content">
+  		<h1>Recover Form</h1>
+  		<div class="form-box">
+  			<div class="withIcon">
+  			<label for="email-recovery">Email:</label>
+  			<i class="fas fa-envelope"></i><input class="inputs" type="email" name="email-recovery" id="email-recovery" placeholder="Enter your Email" />
+  			</div>
+  			<div class="withIcon">
+  				<label for="phone-number">Phone number:</label>
+  				<i class="fas fa-mobile-alt"></i><input type="text" name="phone" id="phone-number" class="inputs" placeholder="Enter your Phone number" />
+  			</div>
+  			<div class="button-flex">
+  				<button class="recover-button" type="submit" name="send">Send</button>
+  				<button class="recover-button done" type="submit">Done</button>
+  			</div>
+  		</div>
+  	</div>
+	<!-- SUBSCRIBE FORM -->
+	<div class="form-content">
+		<h1>Subscribe Form</h1>
+		<div class="form-box">
+			<div class="withIcon">
+			<label for="subemail">Email:</label>
+			<i class="fas fa-envelope"></i><input class="inputs" type="email" name="subemail" id="subemail" placeholder="Your email" />
+			</div>
+			<div class="button-flex">
+				<button class="recover-button" type="submit" name="send">Subscribe</button>
+				<button class="recover-button nothanks" type="submit">No, Thanks</button>
+			</div>
+		</div>
+	</div>
+	<div class='logo-second'>
+	</div>
+</div>
+</div><!-- COL 2 END -->
+    <script src="js/script.js">
+    </script>
+  </body>
+</html>
